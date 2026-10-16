@@ -1,0 +1,81 @@
+/* ── NAVIGATION ────────────────────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  transition: all var(--transition-slow);
+}
+
+.nav--scrolled {
+  background: rgba(5, 10, 14, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Logo */
+.nav__logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.nav__logo-bracket { color: var(--green); }
+.nav__logo-name    { color: var(--white); margin: 0 0.1em; }
+
+/* Circular profile photo in nav */
+.nav__logo-photo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+  transition: box-shadow 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.nav__logo:hover .nav__logo-photo {
+  box-shadow: 0 0 16px rgba(0, 255, 136, 0.7);
+  transform: scale(1.08);
+}
+
+/* Links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--grey);
+  letter-spacing: 0.05em;
+  transition: color var(--transition);
+  background: none;
+  border: none;
+  padding: 0;
+}
+.nav__link:hover { color: var(--green); }
+
+/* Burger */
+.nav__burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1;
+}

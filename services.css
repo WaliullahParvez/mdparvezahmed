@@ -1,0 +1,47 @@
+/* ── SERVICES ──────────────────────────────────────────────────────────────── */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all var(--transition-slow);
+  animation: fadeUp 0.6s ease both;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+.service-card:hover {
+  border-color: rgba(0, 255, 136, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 255, 136, 0.1);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card__icon      { font-size: 2.5rem; margin-bottom: 1rem; }
+.service-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.service-card__desc {
+  font-size: 0.85rem;
+  color: var(--grey);
+  line-height: 1.7;
+}

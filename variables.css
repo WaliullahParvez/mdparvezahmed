@@ -1,0 +1,33 @@
+/* ── DESIGN TOKENS ─────────────────────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --bg:       #050a0e;
+  --bg2:      #0a1520;
+  --bg3:      #0f1e2d;
+  --green:    #00ff88;
+  --green2:   #00cc6a;
+  --blue:     #00c8ff;
+  --red:      #ff3e3e;
+  --yellow:   #ffcc00;
+  --white:    #e8f0f7;
+  --grey:     #4a6070;
+  --grey2:    #2a3a4a;
+  --border:   #1a3040;
+
+  /* Shadows / Glows */
+  --glow:     0 0 20px rgba(0, 255, 136, 0.3);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+  /* Typography */
+  --font-mono:    'Share Tech Mono', monospace;
+  --font-main:    'Exo 2', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+
+  /* Spacing */
+  --section-padding: 5rem 2rem;
+  --max-width: 1100px;
+
+  /* Transitions */
+  --transition: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}

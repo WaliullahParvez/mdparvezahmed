@@ -1,0 +1,317 @@
+/* ══════════════════════════════════════════════════════════
+   PROJECTS — Editorial layout matching screenshot style
+══════════════════════════════════════════════════════════ */
+
+.proj-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Single project block ─────────────────────────── */
+.proj {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: start;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.proj:last-child { border-bottom: none; }
+
+/* Flip layout for even projects (visual on left) */
+.proj--flip {
+  grid-template-columns: 420px 1fr;
+}
+.proj--flip .proj__left  { order: 2; }
+.proj--flip .proj__right { order: 1; }
+
+/* ── Meta row (num + stack + type) ───────────────── */
+.proj__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.proj__num {
+  font-size: 0.68rem;
+  color: var(--grey);
+  letter-spacing: 0.12em;
+}
+.proj__stack {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--bg);
+  background: var(--green);
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+.proj__type {
+  font-size: 0.68rem;
+  color: var(--grey);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── Title ───────────────────────────────────────── */
+.proj__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+/* ── Description ─────────────────────────────────── */
+.proj__desc {
+  font-size: 0.9rem;
+  color: var(--grey);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+.proj__desc strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ── Outcome box ─────────────────────────────────── */
+.proj__outcome {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+  background: rgba(199, 243, 107, 0.06);
+  border: 1px solid rgba(199, 243, 107, 0.2);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.85rem;
+  color: var(--grey);
+  line-height: 1.6;
+}
+.proj__outcome-label {
+  color: #C7F36B;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+/* ── Concept tags ────────────────────────────────── */
+.proj__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.proj__tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--grey);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  background: var(--bg2);
+  transition: border-color 0.2s, color 0.2s;
+}
+.proj__tag:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* ── Right: visualization panel ──────────────────── */
+.proj__right { position: sticky; top: 5rem; }
+
+.proj__viz {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── PhishGuard scan bars ────────────────────────── */
+.pv-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  gap: 0.9rem;
+}
+.pv-label {
+  font-size: 0.68rem;
+  color: var(--grey);
+  letter-spacing: 0.06em;
+}
+.pv-track {
+  height: 6px;
+  background: var(--bg3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.pv-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pv-bar--danger { background: #F56161; }
+.pv-bar--safe   { background: var(--green); }
+.pv-bar--warn   { background: #F5C842; }
+.pv-val {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+.pv-val--danger { color: #F56161; }
+.pv-val--safe   { color: var(--green); }
+.pv-val--warn   { color: #F5C842; }
+.pv-verdict {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: #F56161;
+  border: 1px solid rgba(245, 97, 97, 0.3);
+  background: rgba(245, 97, 97, 0.07);
+  border-radius: 6px;
+  padding: 0.65rem;
+  margin-top: 0.25rem;
+  animation: verdict-pulse 2.5s ease infinite;
+}
+@keyframes verdict-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.65; }
+}
+
+/* ── PassForge password UI ───────────────────────── */
+.pass-field {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--white);
+  letter-spacing: 0.12em;
+}
+.pass-cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--green);
+}
+@keyframes blink { 50% { opacity: 0; } }
+.pass-meter-wrap {
+  background: var(--bg3);
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.pass-fill {
+  height: 100%;
+  background: #F56161;
+  border-radius: 3px;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pass-score {
+  font-size: 0.72rem;
+  color: #F56161;
+  letter-spacing: 0.06em;
+}
+.pass-issues {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.pass-issue {
+  font-size: 0.7rem;
+  color: #F5C842;
+  letter-spacing: 0.04em;
+}
+.pass-suggest {
+  font-size: 0.72rem;
+  color: var(--green);
+  background: rgba(0, 255, 136, 0.07);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: 6px;
+  padding: 0.55rem 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Vulnerability severity dots ─────────────────── */
+.vuln-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.vuln-row:last-child { border-bottom: none; }
+.vuln-cat {
+  font-size: 0.7rem;
+  color: var(--grey);
+  letter-spacing: 0.1em;
+  width: 36px;
+  flex-shrink: 0;
+}
+.vuln-dots {
+  display: flex;
+  gap: 0.35rem;
+  flex: 1;
+}
+.vd {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.vd--crit { background: #F56161; }
+.vd--high { background: #F5C842; }
+.vd--med  { background: rgba(199, 243, 107, 0.7); }
+.vd--low  { background: var(--bg3); border: 1px solid var(--border); }
+.vuln-sev {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+.vuln-sev--danger { color: #F56161; }
+.vuln-sev--warn   { color: #F5C842; }
+.vuln-sev--cyan   { color: var(--blue); }
+
+/* ── Hardening checklist ─────────────────────────── */
+.hard-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: var(--green);
+  background: rgba(0, 255, 136, 0.05);
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.hard-step:hover { background: rgba(0, 255, 136, 0.1); }
+.hard-check {
+  color: var(--green);
+  flex-shrink: 0;
+}
+.hard-secured {
+  text-align: center;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  color: var(--blue);
+  margin-top: 0.5rem;
+  animation: verdict-pulse 2.5s ease infinite;
+}
+
+/* ── Bar animation on scroll ─────────────────────── */
+.pv-bar, .pass-fill { width: 0 !important; }
+.proj__viz.animated .pv-bar,
+.proj__viz.animated .pass-fill { width: var(--w) !important; }

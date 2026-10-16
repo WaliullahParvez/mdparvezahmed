@@ -1,0 +1,96 @@
+/* ── ABOUT ─────────────────────────────────────────────────────────────────── */
+.about__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Avatar */
+.about__avatar-frame {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
+}
+.about__avatar-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--bg2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* Real photo */
+.about__avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+/* Keep icon as fallback (hidden when photo loads) */
+.about__avatar-icon { font-size: 4rem; display: none; }
+.about__avatar-scan {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  animation: scanline 3s linear infinite;
+  opacity: 0.7;
+}
+
+/* Meta */
+.about__meta { display: flex; flex-direction: column; gap: 0.5rem; }
+.about__meta-item { font-family: var(--font-mono); font-size: 0.8rem; color: var(--grey); }
+
+/* Bio */
+.about__bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(232, 240, 247, 0.85);
+  margin-bottom: 2rem;
+}
+
+/* Experience card */
+.about__exp-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  padding: 1.2rem;
+  border-radius: 4px;
+}
+.about__exp-role {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+.about__exp-company {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--green);
+  margin: 0.3rem 0 0.8rem;
+}
+.about__exp-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.about__exp-bullets li {
+  font-size: 0.88rem;
+  color: var(--grey);
+  padding-left: 1rem;
+  position: relative;
+}
+.about__exp-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}

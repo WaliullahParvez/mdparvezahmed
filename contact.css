@@ -1,0 +1,42 @@
+/* ── CONTACT ───────────────────────────────────────────────────────────────── */
+.contact__card {
+  max-width: 600px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.contact__intro {
+  color: rgba(232, 240, 247, 0.75);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all var(--transition);
+}
+.contact__link:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(0, 255, 136, 0.04);
+  transform: translateX(4px);
+}
+.contact__link span { font-size: 1.1rem; flex-shrink: 0; }
