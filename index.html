@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Parvez Ahmed — Cyber Security Expert specializing in penetration testing, vulnerability assessment, and web application security based in Dhaka, Bangladesh." />
+  <meta name="keywords" content="Cyber Security, Ethical Hacker, Penetration Testing, Vulnerability Assessment, Muhammad Parvez Ahmed, Dhaka" />
+  <meta name="author" content="Muhammad Parvez Ahmed" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Parvez Ahmed | Cyber Security Expert" />
+  <meta property="og:description" content="Penetration Testing · Vulnerability Assessment · Security Audits" />
+  <meta property="og:type" content="website" />
+
+  <title>Muhammad Parvez Ahmed | Cyber Security Expert</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/skills.css" />
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <link rel="stylesheet" href="assets/css/certifications.css" />
+  <link rel="stylesheet" href="assets/css/achievements.css" />
+  <link rel="stylesheet" href="assets/css/services.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══════════════════════════════════════════════════════ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <img src="assets/img/portfoliopicture.jpeg" alt="Muhammad Parvez Ahmed" class="nav__logo-photo" />
+      <span class="nav__logo-bracket">[</span>
+      <span class="nav__logo-name">PARVEZ</span>
+      <span class="nav__logo-bracket">]</span>
+    </div>
+    <div class="nav__links" id="navLinks">
+      <button class="nav__link" onclick="scrollToSection('about')">About</button>
+      <button class="nav__link" onclick="scrollToSection('skills')">Skills</button>
+      <button class="nav__link" onclick="scrollToSection('projects')">Projects</button>
+      <button class="nav__link" onclick="scrollToSection('certifications')">Certifications</button>
+      <button class="nav__link" onclick="scrollToSection('services')">Services</button>
+      <button class="nav__link" onclick="scrollToSection('contact')">Contact</button>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__grid-bg"></div>
+    <div class="hero__scan-line"></div>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Available for Security Engagements
+      </div>
+      <h1 class="hero__name glitch" data-text="Muhammad Parvez Ahmed">Muhammad Parvez Ahmed</h1>
+      <h2 class="hero__title">Cyber Security Expert</h2>
+      <p class="hero__tagline"><span id="typewriter"></span><span class="cursor-blink">▮</span></p>
+      <p class="hero__sub">Penetration Testing &nbsp;·&nbsp; Vulnerability Assessment &nbsp;·&nbsp; Security Audits</p>
+      <div class="hero__ctas">
+        <button class="btn btn--primary" onclick="scrollToSection('projects')">View Projects</button>
+        <button class="btn btn--ghost"   onclick="scrollToSection('contact')">Contact Me</button>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-val">1+</span>
+          <span class="hero__stat-label">Experience</span>
+        </div>
+        <div class="hero__stat-div"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-val">20+</span>
+          <span class="hero__stat-label">Projects</span>
+        </div>
+        <div class="hero__stat-div"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-val">4+</span>
+          <span class="hero__stat-label">Certs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__terminal">
+        <div class="hero__terminal-bar">
+          <span class="tb tb--red"></span>
+          <span class="tb tb--yellow"></span>
+          <span class="tb tb--green"></span>
+          <span class="hero__terminal-title">root@parvez:~</span>
+        </div>
+        <div class="hero__terminal-body">
+          <p><span class="tc--green">root@parvez</span><span class="tc--grey">:</span><span class="tc--blue">~</span><span class="tc--grey">$</span> whoami</p>
+          <p class="tc--white">cyber_security_expert</p>
+          <p><span class="tc--green">root@parvez</span><span class="tc--grey">:</span><span class="tc--blue">~</span><span class="tc--grey">$</span> nmap -sV target.io</p>
+          <p class="tc--grey">Starting Nmap 7.94...</p>
+          <p class="tc--green">PORT &nbsp;&nbsp;&nbsp;&nbsp; STATE SERVICE &nbsp; VERSION</p>
+          <p class="tc--white">22/tcp &nbsp;&nbsp; open &nbsp; ssh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OpenSSH 8.9</p>
+          <p class="tc--white">80/tcp &nbsp;&nbsp; open &nbsp; http &nbsp;&nbsp;&nbsp;&nbsp; nginx 1.24</p>
+          <p class="tc--red">443/tcp &nbsp; open &nbsp; https &nbsp;&nbsp;&nbsp; <span class="tc--yellow">[VULNERABLE]</span></p>
+          <p><span class="tc--green">root@parvez</span><span class="tc--grey">:</span><span class="tc--blue">~</span><span class="tc--grey">$</span> <span class="cursor-blink">▮</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═════════════════════════════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="section__label">// ABOUT_ME</div>
+    <h2 class="section__title">Who I Am</h2>
+    <div class="about__grid">
+      <div class="about__left">
+        <div class="about__avatar-frame">
+          <div class="about__avatar-inner">
+            <img src="assets/img/portfoliopicture.jpeg" alt="Muhammad Parvez Ahmed" class="about__avatar-photo" />
+            <div class="about__avatar-scan"></div>
+          </div>
+        </div>
+        <div class="about__meta">
+          <div class="about__meta-item"><span class="tc--green">📍</span> Dhaka, Bangladesh</div>
+          <div class="about__meta-item"><span class="tc--green">💼</span> 1+ Years Experience</div>
+        </div>
+      </div>
+      <div class="about__right">
+        <p class="about__bio">
+          Computer Science &amp; Engineering graduate with a specialization in cybersecurity.
+          I've spent years understanding how attackers think — so organizations can defend smarter.
+          Currently focused on ethical hacking, network security hardening, and red-team operations.
+        </p>
+        <div class="about__exp-card">
+          <div class="about__exp-role">Network Support Engineer</div>
+          <div class="about__exp-company">Alpha Broadway System &nbsp;·&nbsp; Aug 2025 — Dec 2025</div>
+          <ul class="about__exp-bullets">
+            <li>Monitored and maintained network infrastructure for 200+ enterprise clients</li>
+            <li>Assisted in vulnerability scanning and firewall rule audits</li>
+            <li>Responded to 150+ support tickets related to network security incidents</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ════════════════════════════════════════════════════════════ -->
+  <section class="section" id="skills">
+    <div class="section__label">// SKILL_SET</div>
+    <h2 class="section__title">Arsenal</h2>
+    <div class="skills__grid">
+      <div class="skills__card">
+        <div class="skills__card-header">Offensive Security</div>
+        <div class="skills__tags">
+          <span class="skills__tag">Metasploit</span>
+          <span class="skills__tag">Burp Suite</span>
+          <span class="skills__tag">SQLmap</span>
+          <span class="skills__tag">Hydra</span>
+          <span class="skills__tag">Nessus</span>
+        </div>
+      </div>
+      <div class="skills__card">
+        <div class="skills__card-header">Network &amp; Recon</div>
+        <div class="skills__tags">
+          <span class="skills__tag">Nmap</span>
+          <span class="skills__tag">Wireshark</span>
+          <span class="skills__tag">Aircrack-ng</span>
+        </div>
+      </div>
+      <div class="skills__card">
+        <div class="skills__card-header">Programming</div>
+        <div class="skills__tags">
+          <span class="skills__tag">Python</span>
+          <span class="skills__tag">PHP</span>
+          <span class="skills__tag">SQL</span>
+          <span class="skills__tag">Bash</span>
+        </div>
+      </div>
+      <div class="skills__card">
+        <div class="skills__card-header">Platforms</div>
+        <div class="skills__tags">
+          <span class="skills__tag">Kali Linux</span>
+          <span class="skills__tag">Parrot OS</span>
+          <span class="skills__tag">Windows Server</span>
+          <span class="skills__tag">AWS</span>
+          <span class="skills__tag">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ══════════════════════════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="section__label">// CASE_STUDIES</div>
+    <h2 class="section__title">Projects</h2>
+    <div class="proj-list">
+
+      <!-- ── 01 PhishGuard ── -->
+      <article class="proj">
+        <div class="proj__left">
+          <div class="proj__meta">
+            <span class="proj__num mono">01</span>
+            <span class="proj__stack">Python · Flask · VirusTotal API</span>
+            <span class="proj__type mono">SECURITY TOOL</span>
+          </div>
+          <h3 class="proj__title">PhishGuard</h3>
+          <p class="proj__desc"><strong>Problem:</strong> Phishing URLs are visually indistinguishable from legitimate links, making them a primary attack vector for credential theft and malware delivery.</p>
+          <p class="proj__desc">A full-stack web application performing real-time multi-layer phishing URL detection. Combines domain reputation lookups via VirusTotal API, URL pattern analysis with regular expressions, SSL certificate validation, and redirect chain inspection to classify any link as safe, suspicious, or dangerous.</p>
+          <div class="proj__outcome">
+            <span class="proj__outcome-label mono">OUTCOME</span>
+            <span>Tested against 500+ real-world phishing samples with high detection accuracy.</span>
+          </div>
+          <div class="proj__tags">
+            <span class="proj__tag">Threat Intelligence</span>
+            <span class="proj__tag">URL Analysis</span>
+            <span class="proj__tag">Phishing Detection</span>
+            <span class="proj__tag">API Integration</span>
+          </div>
+        </div>
+        <div class="proj__right">
+          <div class="proj__viz">
+            <div class="pv-row"><span class="pv-label mono">URL Scan</span><div class="pv-track"><div class="pv-bar pv-bar--danger" style="width:85%"></div></div><span class="pv-val pv-val--danger mono">PHISHING</span></div>
+            <div class="pv-row"><span class="pv-label mono">SSL Check</span><div class="pv-track"><div class="pv-bar pv-bar--safe" style="width:95%"></div></div><span class="pv-val pv-val--safe mono">VALID</span></div>
+            <div class="pv-row"><span class="pv-label mono">Domain Age</span><div class="pv-track"><div class="pv-bar pv-bar--warn" style="width:38%"></div></div><span class="pv-val pv-val--warn mono">3 DAYS</span></div>
+            <div class="pv-row"><span class="pv-label mono">Reputation</span><div class="pv-track"><div class="pv-bar pv-bar--danger" style="width:92%"></div></div><span class="pv-val pv-val--danger mono">MALICIOUS</span></div>
+            <div class="pv-verdict mono">⚠ THREAT DETECTED</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 02 PassForge ── -->
+      <article class="proj proj--flip">
+        <div class="proj__left">
+          <div class="proj__meta">
+            <span class="proj__stack">Python · JavaScript · zxcvbn</span>
+            <span class="proj__type mono">SECURITY TOOL</span>
+            <span class="proj__num mono">02</span>
+          </div>
+          <h3 class="proj__title">PassForge</h3>
+          <p class="proj__desc"><strong>Problem:</strong> Weak, predictable passwords remain the leading cause of account compromise. Most users lack tools that show them why their password fails.</p>
+          <p class="proj__desc">A real-time password strength analyser and smart suggestion engine. Uses entropy scoring, dictionary attack simulation, and pattern detection to evaluate any password, then generates strong, memorable alternatives via passphrase techniques and substitution rules.</p>
+          <div class="proj__outcome">
+            <span class="proj__outcome-label mono">OUTCOME</span>
+            <span>Guides users from vulnerable credentials to cryptographically strong, memorable alternatives.</span>
+          </div>
+          <div class="proj__tags">
+            <span class="proj__tag">Entropy Analysis</span>
+            <span class="proj__tag">Dictionary Attacks</span>
+            <span class="proj__tag">Passphrase Generation</span>
+            <span class="proj__tag">UX Security</span>
+          </div>
+        </div>
+        <div class="proj__right">
+          <div class="proj__viz">
+            <div class="pass-field mono">P@ssw0rd123<span class="pass-cursor">▮</span></div>
+            <div class="pass-meter-wrap">
+              <div class="pass-meter"><div class="pass-fill" style="width:28%"></div></div>
+            </div>
+            <div class="pass-score mono">Weak — Score: 1/4</div>
+            <div class="pass-issues">
+              <div class="pass-issue mono">⚠ Dictionary word detected</div>
+              <div class="pass-issue mono">⚠ Predictable substitutions</div>
+              <div class="pass-issue mono">⚠ Common pattern: word+number</div>
+            </div>
+            <div class="pass-suggest mono">✓ Suggestion: coral-drift-7-anchor</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 03 Vuln Assessment ── -->
+      <article class="proj">
+        <div class="proj__left">
+          <div class="proj__meta">
+            <span class="proj__num mono">03</span>
+            <span class="proj__stack">Burp Suite · SQLmap · OWASP ZAP</span>
+            <span class="proj__type mono">SECURITY RESEARCH</span>
+          </div>
+          <h3 class="proj__title">Web Vulnerability Assessment — 100+ Targets</h3>
+          <p class="proj__desc"><strong>Scope:</strong> Systematic security assessment across 100+ live web applications, covering the OWASP Top 10 vulnerability categories.</p>
+          <p class="proj__desc">Conducted comprehensive black-box and grey-box penetration testing. Methodology covered POST-based and error-based SQL injection, CSRF token bypass, reflected and stored XSS, WAF evasion techniques, and authentication surface analysis across real web targets.</p>
+          <div class="proj__outcome">
+            <span class="proj__outcome-label mono">OUTCOME</span>
+            <span>Critical vulnerabilities identified and responsibly disclosed across all target categories. WAF bypass demonstrated in controlled environments.</span>
+          </div>
+          <div class="proj__tags">
+            <span class="proj__tag">SQLi</span>
+            <span class="proj__tag">XSS</span>
+            <span class="proj__tag">CSRF</span>
+            <span class="proj__tag">WAF Bypass</span>
+            <span class="proj__tag">Bug Hunting</span>
+          </div>
+        </div>
+        <div class="proj__right">
+          <div class="proj__viz">
+            <div class="vuln-row"><span class="vuln-cat mono">SQLi</span><div class="vuln-dots"><span class="vd vd--crit"></span><span class="vd vd--crit"></span><span class="vd vd--crit"></span><span class="vd vd--high"></span><span class="vd vd--med"></span></div><span class="vuln-sev vuln-sev--danger mono">Critical</span></div>
+            <div class="vuln-row"><span class="vuln-cat mono">XSS</span><div class="vuln-dots"><span class="vd vd--crit"></span><span class="vd vd--high"></span><span class="vd vd--high"></span><span class="vd vd--med"></span><span class="vd vd--low"></span></div><span class="vuln-sev vuln-sev--warn mono">High</span></div>
+            <div class="vuln-row"><span class="vuln-cat mono">CSRF</span><div class="vuln-dots"><span class="vd vd--high"></span><span class="vd vd--high"></span><span class="vd vd--med"></span><span class="vd vd--low"></span><span class="vd vd--low"></span></div><span class="vuln-sev vuln-sev--warn mono">High</span></div>
+            <div class="vuln-row"><span class="vuln-cat mono">WAF</span><div class="vuln-dots"><span class="vd vd--high"></span><span class="vd vd--med"></span><span class="vd vd--med"></span><span class="vd vd--low"></span><span class="vd vd--low"></span></div><span class="vuln-sev vuln-sev--cyan mono">Bypass</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 04 Hardening ── -->
+      <article class="proj proj--flip">
+        <div class="proj__left">
+          <div class="proj__meta">
+            <span class="proj__stack">Nessus · WP-CLI · Sucuri · cPanel</span>
+            <span class="proj__type mono">SECURITY ENGINEERING</span>
+            <span class="proj__num mono">04</span>
+          </div>
+          <h3 class="proj__title">Security Hardening &amp; Malware Removal — 60+ Sites</h3>
+          <p class="proj__desc"><strong>Scope:</strong> End-to-end security remediation for 60+ client websites with active malware infections, backdoors, and misconfigurations.</p>
+          <p class="proj__desc">Full-cycle engagements: security scans, malware identification and removal, backdoor elimination, CMS hardening, error resolution, and complete site migrations — all executed with zero data loss and minimal client downtime.</p>
+          <div class="proj__outcome">
+            <span class="proj__outcome-label mono">OUTCOME</span>
+            <span>100% malware-free post-remediation across all 60+ engagements. Migrations completed with zero data loss.</span>
+          </div>
+          <div class="proj__tags">
+            <span class="proj__tag">Malware Removal</span>
+            <span class="proj__tag">CMS Hardening</span>
+            <span class="proj__tag">Site Migration</span>
+            <span class="proj__tag">Incident Response</span>
+          </div>
+        </div>
+        <div class="proj__right">
+          <div class="proj__viz">
+            <div class="hard-step hard-step--done mono"><span class="hard-check">✓</span> Scan &amp; Identify</div>
+            <div class="hard-step hard-step--done mono"><span class="hard-check">✓</span> Remove Malware</div>
+            <div class="hard-step hard-step--done mono"><span class="hard-check">✓</span> Close Backdoors</div>
+            <div class="hard-step hard-step--done mono"><span class="hard-check">✓</span> Harden CMS</div>
+            <div class="hard-step hard-step--done mono"><span class="hard-check">✓</span> Migrate &amp; Verify</div>
+            <div class="hard-secured mono">● SECURED</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATIONS ════════════════════════════════════════════════════ -->
+  <section class="section" id="certifications">
+    <div class="section__label">// CREDENTIALS</div>
+    <h2 class="section__title">Certifications</h2>
+    <div class="certs__grid">
+      <div class="cert-card">
+        <div class="cert-card__badge">🎖️</div>
+        <div class="cert-card__info">
+          <div class="cert-card__name">Certified Ethical Hacker (CEH)</div>
+          <div class="cert-card__issuer">Arena Web Security &nbsp;·&nbsp; 2025</div>
+        </div>
+        <div class="cert-card__verified">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__badge">🏆</div>
+        <div class="cert-card__info">
+          <div class="cert-card__name">Cisco CCNA</div>
+          <div class="cert-card__issuer">Cisco &nbsp;·&nbsp; 2025</div>
+        </div>
+        <div class="cert-card__verified">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__badge">🤖</div>
+        <div class="cert-card__info">
+          <div class="cert-card__name">AI Innovations in Cyber Security</div>
+          <div class="cert-card__issuer">AI Connect Bangladesh &nbsp;·&nbsp; 2025</div>
+        </div>
+        <div class="cert-card__verified">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__badge">💻</div>
+        <div class="cert-card__info">
+          <div class="cert-card__name">AI for Developers</div>
+          <div class="cert-card__issuer">AI Connect Bangladesh &nbsp;·&nbsp; 2025</div>
+        </div>
+        <div class="cert-card__verified">✓ Verified</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACHIEVEMENTS ══════════════════════════════════════════════════════ -->
+  <section class="section" id="achievements">
+    <div class="section__label">// RECOGNITION</div>
+    <h2 class="section__title">Achievements</h2>
+    <div class="achievements__grid">
+      <div class="achievement-card">
+        <div class="achievement-card__icon">🎯</div>
+        <div>
+          <div class="achievement-card__title">OWASP Top 10 Completed — SQL Injection</div>
+          <div class="achievement-card__desc">Successfully completed all OWASP Top 10 tasks in the SQL Injection category, covering POST-based SQLi, error-based, blind, and WAF bypass techniques.</div>
+          <div class="achievement-card__year">2025</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-card__icon">🛡️</div>
+        <div>
+          <div class="achievement-card__title">OWASP Top 10 Completed — Cross-Site Request Forgery (CSRF)</div>
+          <div class="achievement-card__desc">Completed all OWASP Top 10 tasks in the CSRF category, demonstrating hands-on expertise in forging cross-site requests and testing token validation weaknesses.</div>
+          <div class="achievement-card__year">2025</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-card__icon">🔐</div>
+        <div>
+          <div class="achievement-card__title">OWASP Top 10 Completed — Cross-Site Scripting (XSS)</div>
+          <div class="achievement-card__desc">Completed all OWASP Top 10 tasks in the XSS category, including reflected, stored, and DOM-based XSS exploitation across real-world style environments.</div>
+          <div class="achievement-card__year">2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ══════════════════════════════════════════════════════════ -->
+  <section class="section" id="services">
+    <div class="section__label">// OFFERINGS</div>
+    <h2 class="section__title">Services</h2>
+    <div class="services__grid">
+      <div class="service-card">
+        <div class="service-card__icon">⚔️</div>
+        <h3 class="service-card__title">Penetration Testing</h3>
+        <p class="service-card__desc">Full-scope ethical hacking engagements — web apps, networks, APIs, and infrastructure. Identifying vulnerabilities before attackers do.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🔍</div>
+        <h3 class="service-card__title">Vulnerability Assessment</h3>
+        <p class="service-card__desc">Systematic scanning, analysis, and prioritization of security weaknesses across your digital estate.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">📋</div>
+        <h3 class="service-card__title">Security Audits</h3>
+        <p class="service-card__desc">Comprehensive review of policies, configurations, and controls aligned with ISO 27001, NIST, and OWASP frameworks.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🛡️</div>
+        <h3 class="service-card__title">Incident Response</h3>
+        <p class="service-card__desc">Rapid investigation, containment, and post-incident analysis to minimize damage and prevent recurrence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="section__label">// GET_IN_TOUCH</div>
+    <h2 class="section__title">Contact</h2>
+    <div class="contact__card">
+      <p class="contact__intro">
+        Have a security challenge? Let's talk. I'm available for freelance engagements, consulting, and full-time opportunities.
+      </p>
+      <div class="contact__links">
+        <a class="contact__link" href="mailto:oaliullahparvez@gmail.com">
+          <span>📩</span> oaliullahparvez@gmail.com
+        </a>
+        <a class="contact__link" href="https://linkedin.com/in/muhammad-parvez-ahmed" target="_blank" rel="noreferrer">
+          <span>🔗</span> linkedin.com/in/muhammad-parvez-ahmed
+        </a>
+        <a class="contact__link" href="https://github.com/WaliullahParvez" target="_blank" rel="noreferrer">
+          <span>🐙</span> github.com/WaliullahParvez
+        </a>
+        <a class="contact__link" href="https://wa.me/01863578601" target="_blank" rel="noreferrer">
+          <span>💬</span> WhatsApp: 01863578601
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__text">
+      &copy; <span id="year"></span> Muhammad Parvez Ahmed &nbsp;·&nbsp; Built with
+      <span class="tc--green">security-first</span> principles.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
